@@ -4,8 +4,8 @@ class Employee extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            id: "   ",
-            name: " ",
+            id: "",
+            name: "",
             age: "",
             email: "",
             employees: []
@@ -31,7 +31,7 @@ class Employee extends React.Component {
          
             if (employees[i].id === this.state.id) {
                 
-                employees = employees.splice(i, 1);
+                employees.splice(i, 1);
                 
             }
         }
