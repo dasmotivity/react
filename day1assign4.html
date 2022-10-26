@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            background-color: rgb(18, 111, 111);
+            margin: auto;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        .row{
+            display: flex;
+        }
+        .column{
+            flex: 50%;
+        }
+        body {
+            height: 1000px;
+            background-color: white
+        }
+
+        footer {
+            background-color: rgb(18, 111, 111);
+
+            color: white;
+
+            padding: 20px;
+        }
+        #align-left{
+            text-align: left;
+            margin-left: 520px;
+        }
+    </style>
+</head>
+<header>
+    <h3>SEMANTIC AND NON SEMANTIC</h3>
+</header>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <h4>SECTION</h4>
+            <p>This is a section Column which appears just after Header and Navbar and at left of the web page.</p>
+            <p>Semantic elements tell everything about its content like article, aside, figcaption, p, h1, figure,
+                footer.</p>
+            <p>Non-semantic emements tell nothing about its content like div, span</p>
+            <br><br><br><br><br>
+            <h4>Article</h4>
+            <p>Article column liesbelow the Section Column</p>
+            <p>After this column there is a footer in the webpage</p><br><br><br><br><br><br><br>
+        </div>
+        <div class="column" id="align-left">
+            <div>
+                <h4>ASIDE</h4>
+                <P>
+                    Aside Column is at right side of the page
+                </P>
+                <p>
+                    IFrame is atteched below this Aside
+                </p>
+                <br><br><br><br><br>
+                <h4><b>Iframe</b></h4>
+                <iframe></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <h5>Blog By ramanadas</h5>
+</footer>
+
+</html>

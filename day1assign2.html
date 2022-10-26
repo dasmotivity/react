@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day1 assignment 2</title>
+    <style>
+        body div {
+            background-color: rgb(205, 201, 201);
+            text-align: center;
+            margin: auto;
+            width: fit-content;
+        }
+        .align-right{
+            text-align: right;
+            padding-left: 20px;
+        }
+        .table {
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+       h3{
+        padding-top: 20px;
+       }
+
+        #ta {
+            resize: none;
+        }
+        td{
+            padding-left: auto;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <u>
+            <h3>Registration form</h3>
+        </u><br>
+        <div>
+            <table class="table" style="padding-bottom: 20px;">
+                <tr>
+                    <td class="align-right">Upload profile pic:</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">First Name</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">Last Name</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">age</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">email</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">Password</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">confirm password</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td class="align-right">date of birth</td>
+                    <td ><input type="date" ></td>
+                </tr>
+                <tr>
+                    <td class="align-right">Gender</td>
+                    <td><input type="radio" id="male" value="male"><label for="male">male</label>
+                        <input type="radio" id="female" value="female"><label for="female">female</label>
+                        <input type="radio" id="others" value="others"><label for="others">others</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="address" class="align-right">Address</td>
+                    <td><textarea id="ta" cols="20" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="submit"><input type="submit" value="reset" style="margin-left: 20px; "></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

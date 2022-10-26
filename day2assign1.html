@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        setInterval(timer,1000);
+        function timer(){
+            let d = new Date(new Date().getHours() +":"+new Date().getMinutes() +":"+new Date().getSeconds());
+            console.log()
+            document.getElementById("result").innerHTML=  new Date().getHours() +":"+new Date().getMinutes() +":"+new Date().getSeconds()+" "
+        }
+        function displaydata(){
+          timer();
+
+           var password = document.getElementById("inputPassword2").value;
+           document.getElementById("res").innerHTML=password;
+           console.log(password)
+           console.log(""+window.location.protocol+navigator.javaEnabled)
+           
+        }
+        
+
+function getLocation() {
+  const x = document.getElementById("lat");
+  try {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } catch {
+    x.innerHTML = err;
+  }
+}
+
+function showPosition(position) {
+  const x = document.getElementById("lat");
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+    </script>
+
+   <form class="row g-3" action="#" >
+    <div class="col-auto">
+      <label for="staticEmail2" class="visually-hidden">Email</label>
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+    </div>
+    <div class="col-auto">
+      <label for="inputPassword2" class="visually-hidden">Password</label>
+      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    </div>
+    <div class="col-auto">
+      <button type="submit" onclick='displaydata()' class="btn btn-primary mb-3" >Confirm identity</button>
+    </div>
+  </form>
+  <div id="res">password:</div>
+    <p id="result">
+        
+    </p>
+   <lat id="lat">
+
+   </lat>
+<button onclick="getLocation()">Try It</button>
+
+</body>
+
+</html>
