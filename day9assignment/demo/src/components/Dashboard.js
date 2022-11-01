@@ -18,13 +18,13 @@ function Dashboard (props){
         <div className="form-inline my-2 my-lg-0" id="navbarNav">
           <ul className="navbar-nav">
           <li className="nav-item">
-              <Link className="nav-link"to="/#">job</Link>
+              <Link className="nav-link"to="#">job</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/#">company</Link>
+              <Link className="nav-link" to="#">company</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/#">candidate</Link>
+              <Link className="nav-link" to="#">candidate</Link>
             </li>
             <li className="nav-item">
                 <button className="btn btn-danger" onClick={logout}>signout</button>
@@ -41,10 +41,10 @@ function Dashboard (props){
         <div className="form-inline my-2 my-lg-0" id="navbarNav">
           <ul className="navbar-nav">
           <li>
-              <Link to="/#">candidate</Link>
+              <Link to="#">candidate</Link>
             </li>
             <li>
-              <Link to="/#">job</Link>
+              <Link to="#">job</Link>
             </li>
             
             <li>
@@ -61,10 +61,10 @@ function Dashboard (props){
         <div className="form-inline my-2 my-lg-0" id="navbarNav">
           <ul className="navbar-nav">
           <li>
-              <Link to="/#">companies</Link>
+              <Link to="#">companies</Link>
             </li>
             <li>
-              <Link to="/#">jobs</Link>
+              <Link to="#">jobs</Link>
             </li>
             
             <li>
