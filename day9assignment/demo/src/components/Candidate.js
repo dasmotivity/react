@@ -1,6 +1,6 @@
 import Dashboard from "./Dashboard"
 
-function Candidate(){
+const Candidate=()=>{
     return(
         <div>
             <Dashboard role={localStorage.getItem("role")}></Dashboard>

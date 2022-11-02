@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useState } from "react"
 import {Link,useNavigate} from "react-router-dom"
 import Dashboard from "./Dashboard"
@@ -14,11 +15,14 @@ function Signin(){
        const onPasswordChange=(event)=>{
         setPassword(event.target.value)
        }
-       const onRoleChange=(event)=>{
-        setRole(event.target.value)
-       }
+      //  const onRoleChange=(event)=>{
+      //   setRole(event.target.value)
+      //  }
     const login = ()=>{
-        if(email==="test@gmail.com" && password==="123") {
+      role = verifyUser(email,password)
+        if(false) {
+          
+          setRole(role)
           localStorage.setItem("isLoggedIn",true)
           localStorage.setItem("role",role)
           alert("login successfully")
@@ -27,10 +31,16 @@ function Signin(){
           alert("invalid credentials")
         }
     }
+    const verifyUser = (email, password)=>{
+      let data = {email:email,password:password}
+       return axios.post("http://localhost:8080/checkuser",data).then((response)=>response.data).toString
+      
+    }
     return(
+      
         <div>
              <Dashboard role={localStorage.getItem("role")}></Dashboard>
-
+              
                  <form>
   <div className="form-group">
     <label >Email address</label>
@@ -41,12 +51,12 @@ function Signin(){
     <label >Password</label>
     <input type="password" onChange={onPasswordChange} className="form-control" id="password" placeholder="Password"/>
   </div><br></br>
-   <select id="role" name="role" onChange={onRoleChange} className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+   {/* <select id="role" name="role" onChange={onRoleChange} className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
   <option >select</option>
   <option value="admin">admin</option>
   <option value="employer">employer</option>
   <option value="candidate">candidate</option>
-</select>
+</select> */}
   
   <button type="submit"  onClick={login} className="btn btn-primary">Login</button>
 
